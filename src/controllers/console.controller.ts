@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Delete, Route, Path, Body, Tags, Patch } from "tsoa";
 import { consoleService } from "../services/console.service";
 import { ConsoleDTO } from "../dto/console.dto";
+import {notFound} from "../error/NotFoundError";
 
 @Route("consoles")
 @Tags("Consoles")

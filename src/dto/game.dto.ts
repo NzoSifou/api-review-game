@@ -4,4 +4,5 @@ export interface GameDTO {
   id?: number;
   title: string;
   console?: ConsoleDTO;
+  console_id: number;
 }
