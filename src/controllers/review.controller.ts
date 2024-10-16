@@ -1,9 +1,6 @@
 import {Body, Controller, Delete, Get, Patch, Path, Post, Route, Tags} from "tsoa";
 import {ReviewDTO} from "../dto/review.dto";
 import {reviewService} from "../services/review.service";
-import {GameDTO} from "../dto/game.dto";
-import {gameService} from "../services/game.service";
-import {Review} from "../models/review.model";
 @Route("reviews")
 @Tags("Reviews")
 export class ReviewController extends Controller {

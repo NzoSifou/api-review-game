@@ -1,8 +1,7 @@
 import { Controller, Get, Post, Delete, Route, Path, Body, Tags, Patch } from "tsoa";
 import { consoleService } from "../services/console.service";
 import { ConsoleDTO } from "../dto/console.dto";
-import {notFound} from "../error/NotFoundError";
-import {GameDTO} from "../dto/game.dto";
+import {GameOutputDTO} from "../dto/game.dto";
 
 @Route("consoles")
 @Tags("Consoles")
@@ -45,7 +44,7 @@ export class ConsoleController extends Controller {
   }
 
   @Get("{id}/games")
-  public async getGamesByConsoleId(@Path() id: number): Promise<GameDTO[]> {
+  public async getGamesByConsoleId(@Path() id: number): Promise<GameOutputDTO[]> {
     return consoleService.getGamesByConsoleId(id);
   }
 }

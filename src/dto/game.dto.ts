@@ -1,8 +1,13 @@
-import { ConsoleDTO } from "./console.dto";
-
-export interface GameDTO {
-  id?: number;
+export interface GameInputDTO {
   title: string;
-  console?: ConsoleDTO;
   console_id: number;
+}
+
+export interface GameOutputDTO {
+  id: number;
+  title: string;
+  console: {
+    id: number;
+    name: string;
+  };
 }
